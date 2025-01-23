@@ -1,3 +1,4 @@
+from django.urls import reverse
 from django.db import models
 from django.contrib.auth.models import User
 from tinymce.models import HTMLField
@@ -43,6 +44,9 @@ class Advert(models.Model):
 
     def preview(self):
         return self.content[0:123] + '...'
+
+    def get_absolute_url(self):
+            return reverse('advert_detail', args=[str(self.id)])
 
 
 class Feedback(models.Model):

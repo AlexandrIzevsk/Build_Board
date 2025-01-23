@@ -17,3 +17,5 @@ class PostForm(forms.ModelForm):
 	class Meta:
 		model = Advert
 		fields = '__all__'
+
+
