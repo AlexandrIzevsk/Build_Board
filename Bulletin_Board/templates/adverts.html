@@ -35,7 +35,7 @@ Adverts
         <hr>
         <a href="{{ link }}{{ single_advert.get_absolute_url }}"><h2>{{ single_advert.title }}</h2></a>
         <h6>{{ single_advert.time_in|date:'d M Y' }}</h6>
-        <h3>{{ single_advert.text }}</h3>
+        <h3>{{ single_advert.content|safe }}</h3>
         {{ form.media }}
     {% endfor %}
 

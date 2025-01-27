@@ -9,7 +9,6 @@ OneAdvert
 <!-- В контенте на странице мы выводим сам товар, идентификатор которого был передан в url -->
 {% block content %}
     <h3>{{ advert.title }}</h3>
-    <h4>"{{ advert.text }}"</h4>
-    <h4>"{{ advert.content }}"</h4>
+    <h4>"{{ advert.content|safe }}"</h4>
     <h6>{{ advert.time_in|date:'d M Y' }}</h6>
 {% endblock content %}
